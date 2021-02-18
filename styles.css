@@ -246,6 +246,12 @@ video.project {
     border-radius: 15px;
 }
 
+iframe.project {
+    position: relative;
+    left: 10%;
+    border-radius: 15px;
+}
+
 img.project_end {
     margin-bottom: 60px;
 }
