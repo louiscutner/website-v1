@@ -1,16 +1,34 @@
 @media (min-width: 500px) {
     .flex-item {
-        border-radius: 4%;
+        margin: 20px;
+        width: 350px;
+        height: 370px;
+        padding-bottom: 35px;
+    }
+    .flex-item-image {
         width: 350px;
         height: 350px;
+        border-radius: 4% 4% 0% 0%;
+    }
+    .footer_2 {
+        border-radius: 0% 0% 18px 18px;
     }
 }
 
 @media (max-width: 500px) {
     .flex-item {
-        border-radius: 9%;
+        margin: 45px 20px;
         width: 130px;
         height: 130px;
+        padding-bottom: 65px;
+    }
+    .flex-item-image {
+        width: 130px;
+        height: 130px;
+        border-radius: 9% 9% 0% 0%;
+    }
+    .footer_2 {
+        border-radius: 0% 0% 8px 8px;
     }
 }
 
@@ -29,16 +47,37 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    text-align: center;
 }
 
 .flex-item {
-    padding: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 150px;
     font-weight: bold;
-    font-size: 3em;
     text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.wrapper_2 {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper_2>* {
+    flex: 1 100%;
+}
+
+.header_2 {
+    background: lightgreen;
+    border-radius: 20% 20% 0 0;
+}
+
+.footer_2 {
+    background: lightgreen;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    outline-width: 5px;
 }
