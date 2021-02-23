@@ -4,6 +4,8 @@
         width: 350px;
         height: 370px;
         padding-bottom: 15px;
+        border: solid lightgray 5px;
+        border-radius: 19px;
     }
     .flex-item-image {
         width: 350px;
@@ -11,7 +13,7 @@
         border-radius: 4% 4% 0% 0%;
     }
     .footer_2 {
-        border-radius: 0% 0% 18px 18px;
+        border-radius: 0% 0% 15px 15px;
     }
     a.back {
         padding-left: 13%;
@@ -53,7 +55,9 @@
     .flex-item {
         margin: 45px 20px;
         width: 130px;
-        height: 130px;
+        height: 190px;
+        border: solid lightgray 5px;
+        border-radius: 17px;
     }
     .flex-item-image {
         width: 130px;
