@@ -1,0 +1,220 @@
+<!-- HTML code for sample project page -->
+
+<!doctype html>
+<html lang="en-gb">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Louis Cutner</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="main.js"></script>
+
+<!-- Link to icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+<!-- Links to fonts used -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
+    <main role="main"></main>
+    <a href="index.html" class="home">
+        <h2 class="project_title">Louis Cutner</h2>
+    </a>
+    <div class="wrapper">
+        <div class="header">
+            <a class="back" href="projects_v2.html">
+                <i class="bi-arrow-left"></i>
+            </a>
+            <h3 class="project_title">WHICH SOCIO-ECONOMIC FACTORS CAN PREDICT THE
+                SUICIDE RATE IN A UK LOCAL AUTHORITY?</h3>
+        </div>
+    </div>
+    <h5 class="top">Overall, 5691 suicides were registered in England and Wales in 2019, the highest since 2000. The
+        suicide rate of young people aged
+        10 to 24 had increased by 94% since 2012 [1]. To help remedy this, it is important to understand which
+        socio-economic
+        demographics directly impact the number of suicides.<br><br>
+        Various demographic data were collected from the Office for National Statistics (ONS) [2], for different local
+        authorities of the UK,
+        in 2016. Examples of some of the data collected were the number of drug deaths, total fertility rate, old age
+        dependency ratio,
+        distance travelled to work, house price pear area, GDP per capita, etc. In total there were 28 different
+        predictors to investigate.
+        These data were collected for each of the UK’s local authorities, giving 302 data points for each category. Data
+        for each local
+        authority’s suicide rate were collected for the year of 2016 (total deaths in that year). A full list of the
+        attributes used can be found in
+        appendix 5.1.<br><br>
+        The report is split into two parts, an explanatory analysis, and a predictive analysis. The explanatory analysis
+        looks at which factors
+        have a statistically significant impact on suicide rates. The second part of the report attempts to create a
+        predictive model to predict
+        the suicide rate of a local authority, based on the other socio-economic data. The model is tested on a test
+        data set containing a
+        randomly selected subset of the data from 2016.</h5>
+    <h3 class="project_subheading">PREPARING THE DATA</h3>
+    <h5>Firstly, all the data for 2016 had to be compiled together into one large data set.
+        Data from some local authorities had to be removed as there were some
+        missing data points and null values. Once this was done, a box and whisker
+        plot was created for the suicide rates and outliers were identified that were
+        outside the range Q<sub>3</sub> + 1.5 x IQR and Q<sub>1</sub> - 1.5 x IQR. These outliers were then
+        removed from the data (code in appendix 5.3.1).
+    </h5>
+    <img class="project" src="images/Data/image_1.png">
+    <h3 class="project_subheading">EXPLANATORY ANALYSIS</h3>
+    <h5>In the explanatory analysis, we are looking to find what differences in local authorities’ demographics
+        correlate to differing suicide
+        rates. Linear regression (ordinary least squares regression, or OLS) models are used, with the suicide rate as
+        the continuous
+        dependent variable.<br><br>Based on our own intuition and anecdotal evidence, we hypothesised that there would
+        be a correlation between the number of drug
+        deaths, and number of suicides. We also predicted that there would be a connection between the total female
+        population and suicide
+        rate, since suicide is over three times more common amongst men [1].<br><br>28 OLS models were produced, and the
+        six that showed the strongest correlation between the predictors and suicide rates are
+        shown below, as well as the RSS and R2 values. The closer the R2 value is to 1, the stronger the correlation is.
+        The highest R2 value
+        was from female population, with an R2 value of 0.585 (code in appendix 5.3.3).
+    </h5>
+    <img class="project" src="images/Data/image_2.png">
+    <h3 class="project_subheading">PREDICTIVE ANALYSIS - EXPLORATORY ANALYSIS AND PREPARING THE DATA</h3>
+    <h5>To help reduce the number of suicides, local authorities should investigate what demographic factors are likely
+        to increase their
+        suicide rate. It would be useful for the government to have a model to predict what areas will have the highest
+        suicide rate based on
+        their socio-economic data, to aid local authorities in making changes to reduce the number of suicides and
+        getting help to those
+        who need it.<br><br>Firstly, the data was split into three different sections. The first section is a training
+        data set made up from 60% of the original
+        dataset. This will be used to build and refine the predictive model. The second section is the validation set,
+        made up from 20% of the
+        original data set. While training the data set, the validation set is used to check the accuracy of the model,
+        to ensure that the model
+        is not over-fitting. Finally, there is the testing data set, also made up from 20% of the original data set.
+        This is only used once the
+        model is finished, to test that it is accurate in making predictions on an unknown data set (code in appendix
+        5.3.2).<br><br>The suicide rate data were split into three classes: 0 to 10, 11 to 21 and 22 to 33 suicides. The
+        aim of the model is to be able to
+        predict within which class a national authority will fall into. Figure 8 shows these three classes, and the
+        frequency of each class.
+        It is clear from Figure 8 that the data set is imbalanced, and there are much fewer occurrences of class 3 (22
+        to 33 suicides). To
+        remedy this, oversampling is used to balance the data set (code in appendix 5.3.4).<br><br>The balanced data set
+        can be seen in figure 9. There is an approximately equal number of occurrences in each group, and there are
+        three groups, so for the model to be effective, it will need to beat an accuracy of 33% (which can be obtained
+        by randomly selecting
+        a class for a local authority).
+    </h5>
+    <img class="project" src="images/Data/image_3.png">
+    <h3 class="project_subheading">PREDICTIVE ANALYSIS - CREATING THE MODEL</h3>
+    <h5>The model would need to take in continuous data to make a multiclass prediction, so a decision tree will be
+        used. The following
+        method was used to select the hyper parameters for the decision tree:<br><br>
+        1. First the model was trained using the training data set<br>
+        2. Different values for the parameters of minimum gini impurity decrease and depth were tested on for the model
+        to see which gave
+        the most accurate results on both the training and validation data sets (i.e. best of both)
+        (code in appendix 5.3.4)<br><br>We first picked the depth as 4, as this is when the accuracy of the validation
+        set predictions peaks, at a value of approximately 0.65.
+        It is also when the training predictions and validation predictions are closest to one another before the
+        evaluation accuracy starts to
+        decrease again (see Figure 11).<br><br>Once we chose the depth, we looked at Figure 10 and found that the
+        optimum impurity decrease for a depth of 4 was between
+        0.001 and 0.004, so we picked 0.0025.
+    </h5>
+    <img class="project" src="images/Data/image_4.png">
+    <h3 class="project_subheading">PREDICTIVE ANALYSIS - ANALYSIS OF MODEL</h3>
+    <h5>The results show that the model is effective for making predictions in the training data set with an accuracy of
+        80.3%, and in the
+        validation data set to an accuracy of 65.5%, which is considerably higher than the minimum accuracy required
+        (which was 33.3%
+        which could be achieved by guessing at random).<br><br>The first split is based on female population, if it is
+        above a certain threshold number. The model continues to split based on all six
+        of the key features that we hypothesised to be relevant in 2.2. It is worth noting that five of the fifteen
+        splits were based on female
+        population, which makes sense, because in part 2.2 it was found that this attribute had the strongest
+        correlation with suicide rates
+        of all the predictors we looked at.<br><br>The results have ginis in the range from 0 to 0.52. The gini with the
+        best value (of zero) was in areas where the female population is
+        less than 61450, and more than 6093 people walk to work. These indicators would suggest that the area would be
+        class 1
+        (between 0 and 10 suicides). Another example of a low gini would be in areas where female population is greater
+        than 146000,
+        there are less than 16.5 drug related deaths, but more than 10.5 drug misuse related deaths. This would have
+        predicted class 2
+        (between 11 and 21 suicides) with a gini of 0 as well.<br><br>When the final model was applied to the test data
+        set, an accuracy of 58.6% was achieved, which is not too high, although still much
+        higher than the probability of randomly guessing the suicide rate correctly (33%).
+    </h5>
+    <img class="project" src="images/Data/image_5.png">
+    <h3 class="project_subheading">Conclusion</h3>
+    <h5>This model highlights how difficult it is to accurately predict a person’s likelihood of committing suicide
+        purely based on
+        demographics of the area in which they live. There are far more factors that would need to be considered, some
+        completely
+        independent of the socio-economic environment.<br><br>The main predictor used was the female population, though
+        it is known that males are significantly (over three times) more likely to
+        commit suicide than women, so just by looking at how many men there are, it would be easy to assume that there
+        would be a higher
+        suicide rate. This is not particularly insightful or useful, because it is not something that can be changed or
+        used to reduce people’s
+        likelihood of committing suicide.<br><br>Furthermore, the model’s accuracy (though better than random chance),
+        is still quite low, and a lot more data and training would be
+        needed to make accurate predictions about suicide rates. For example, we were unable to find good data on
+        education in the UK’s
+        local authorities, which would likely have been a huge influencing factor, especially considering that a large
+        majority of suicides are
+        in young people aged between 10 and 24.
+    </h5>
+    <!-- <h3 class="project_subheading">References</h3>
+    <h5 class"references">[1] https://www.iea.org/countries/haiti<br>[2]
+        https://ourworldindata.org/energy/country/haiti?country=~HTI<br>[3]
+        https://energypedia.info/wiki/Haiti_Energy_Situation<br>[4]
+        https://www.indexmundi.com/facts/indicators/EG.ELC.LOSS.ZS/rankings<br>[5]
+        https://en.wikipedia.org/wiki/Electricity_sector_in_Haiti#Electricity_supply_and_demand<br>[6]
+        https://www.researchgate.net/publication/303811272_Haiti_Sustainable_Energy_Roadmap_Harnessing_Domestic_Energy_Resources_to_Build_a_Reliable_Affordable_and_Climate-Compatible_Electricity_System<br>[7]
+        Inter-American Development Bank (IDB), “Project Results in Guyana,”
+        2012,www.iadb.org/en/mapamericas/guyana/mapamericas-project-results-in-guyana,5543.html<br>[8] IDB, “IDB and
+        JICA to Invest Up to $600 Million in Green Energy in Central America and theCaribbean,” press release
+        (Washington, DC: 16 March 2012)<br>[9] French Agency for Development, “Project Details
+        Sheet,”www.afd.fr/home/projets_afd/infrastructures_energie/Energie/organe-regulation-regional-afrique-ouest<br>[10]
+        Nordic Investment Bank, Annual Activity Report, 2011 (Helsinki: 2011)<br>[11] “German investment group sees
+        fertile investment grounds in DR,” Dominican Today, 2006<br>[12]
+        https://worldpopulationreview.com/countries/haiti-population<br>[13]
+        https://www.renewablesfirst.co.uk/windpower/windpower-learning-centre/how-large-are-farm-wind-turbines-medium-wind-turbines/<br>[14]
+        https://www.enercon.de/en/products/ep-2/e-82/<br>[15]
+        https://www.renewableenergyhub.co.uk/main/wind-turbines/renting-land-for-wind-farms/<br>[16]
+        https://news.energysage.com/what-are-the-most-efficient-solar-panels-on-the-market/<br><br><br><br><br>
+    </h5> -->
+    <footer class="footer">
+        <div class="icons">
+            <div class="icon_border">
+                <a class="icons" href="mailto:lcutner@me.com">
+                    <i class="bi-envelope"></i>
+                </a>
+            </div>
+            <div class="icon_border">
+                <a class="icons"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiXqqWTmvTuAhXEiFwKHXOzCpgQFjAAegQIAxAD&url=https%3A%2F%2Fwww.instagram.com%2Flouis_cutner%2F%3Fhl%3Den-gb&usg=AOvVaw2f47-FOatVEoI65Nz24zQn">
+                    <i class="bi-instagram"></i>
+                </a>
+            </div>
+            <div class="icon_border">
+                <a class="icons"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi21-qymvTuAhWCQUEAHR_KCh8QFjAAegQIARAD&url=https%3A%2F%2Fuk.linkedin.com%2Fin%2Flouis-cutner-8609091a3&usg=AOvVaw3FrT9wXvJERYiZ_d3QDaHe">
+                    <i class="bi-linkedin"></i>
+                </a>
+            </div>
+            <div class="icon_border">
+                <a class="icons" href="images/CV.pdf">
+                    <i class="bi-file-earmark-person"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

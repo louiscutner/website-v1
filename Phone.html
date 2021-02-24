@@ -1,0 +1,205 @@
+<!-- HTML code for sample project page -->
+
+<!doctype html>
+<html lang="en-gb">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Louis Cutner</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="main.js"></script>
+
+<!-- Link to icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+<!-- Links to fonts used -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
+    <main role="main"></main>
+    <a href="index.html" class="home">
+        <h2 class="project_title">Louis Cutner</h2>
+    </a>
+    <div class="wrapper">
+        <div class="header">
+            <a class="back" href="projects_v2.html">
+                <i class="bi-arrow-left"></i>
+            </a>
+            <h3 class="project_title">Embodied Energy of a Phone</h3>
+        </div>
+    </div>
+    <h5 class="top">In this report, I investigated the energy
+        associated with each phase of the Samsung
+        Galaxy S6’s lifetime. Initially I looked at the
+        breakdown of materials in the phone. Each of
+        these materials and their respective weights
+        were put into CES EduPack to find their
+        embodied energies. From this the total
+        embodied energy of the phone was calculated
+        to be 71 MJ. The embodied energy calculations
+        for each material were also performed manually
+        to verify the output from CES EduPack.<br><br>
+        The phone is manufactured in Vietnam, then
+        shipped to the UK, where it is driven to the store. The energy in transport was
+        calculated in CES EduPack to be 1.26 MJ, however when calculated manually the value
+        was 0.453 MJ. This difference is likely due to inefficiencies such as the ship taking a
+        longer route, or not being loaded to 100% capacity.<br><br>
+        The energy in use was then calculated for the phone – assuming the phone has a
+        lifetime of only three years. This is based on the fact that Samsung stop supporting
+        updates for phones over three years old. In one day, it was calculated that the energy
+        use in standby mode would be 55,674 J, the energy in normal use would be 6,854 J,
+        and the energy in heavy use would be 27,785 J – with the total for one day being
+        approximately 90,313 J. The total energy use over the lifetime of the phone would be
+        98.9 MJ.</h5>
+    <h3 class="project_subheading">Breakdown of materials used</h3>
+    <h5>For the teardown of the Samsung Galaxy S6 phone,
+        preliminary data on the materials used was gleaned
+        from Figure 1. From this, the major material groups
+        were determined, then further refined with specific
+        information for the S6, such as the type of Aluminium
+        used. The masses were approximated from Figure 1,
+        and using the CES EduPack database [4], embodied
+        energies were calculated for each material, with a
+        total embodied energy of 71MJ for the phone. Table 1
+        shows the materials, their respective masses and
+        embodied energies. Some assumptions and estimates were made where data was
+        unavailable, such as the ‘others’ section was presumed to be the camera module. The results
+        from CES EduPack can be seen in Figure 2.
+    </h5>
+    <img class="project" src="images/Phone/image_1.png">
+    <h3 class="project_subheading">Material Assumptions</h3>
+    <h5><b>1. Cardboard [3]</b><br>
+        The phone is packaged in a box, which was determined to be made from cardboard.
+        Cardboard is used for its lightweight, manufacturable and fairly durable qualities.
+        Cardboard also allows for images and product descriptions to be printed upon it.
+        <br><br><b>2. Polycarbonate (PC)</b><br>
+        The back of the phone is made from polycarbonate, this is a material that is easily
+        moulded to make a phone shape and can be coloured for personalisation. In addition,
+        polycarbonate has good strength, toughness and durability properties, which are suitable
+        qualities for providing the phone with protection against scratches and drops.
+        <br><br><b>3. Paper</b><br>
+        Paper is used for the instructions manual of the phone, which is included within the
+        packaging when a new phone is bought. Paper is used as a common material in which
+        usage and care instructions can be printed upon in bulk.
+        <br><br><b>4. Aluminium 6013 [1]</b><br>
+        Aluminium’s good strength, toughness and durability properties allows for a strong and
+        stable phone frame, which safely holds all the inner components of the phone. The
+        specific alloy used in the S6 is 6013.
+        <br><br><b>5. Lithium Ion Battery [2]</b><br>
+        Lithium-ion batteries are one of the lightest batteries with a good energy density – making
+        it suitable for smart phone use. In CES EduPack, the option for a rechargeable lithium-ion
+        battery was selected.
+        <br><br><b>6. LCD Module</b><br>
+        In CES EduPack, the option for a liquid crystal display panel was selected.
+        Figure 1 - Breakdown of phone [5]
+        <br><br><b>7. Printed Circuit Board</b><br>
+        In CES EduPack, the option for a printed circuit board assembly was chosen.
+        <br><br><b>8. Camera Module</b><br>
+        The main other component of the smart phone was the rear camera, which was assumed
+        to be made of soda lime glass, for its optical transparency qualities, and resistance to
+        scratches, unlike other transparent materials such as acrylic or Perspex.
+    </h5>
+    <img class="project" src="images/Phone/image_2.png">
+    <h3 class="project_subheading">Material embodied energy calculations</h3>
+    <h5>Using data from the CES EduPack database [4], the embodied energies for each component of
+        the phone was calculated. This was achieved by multiplying the component’s mass by the
+        material’s embodied energy per kilogram. Calculations can be seen below:<br><br>
+        <b>• Cardboard</b>, mass = 0.13kg<br>
+        Material embodied energy = 49-54 MJ/kg, mean = 51.5 MJ/kg
+        Component embodied energy = 0.13 x 51.5 = 6.70 MJ
+        <br><br> <b>• Polycarbonate (PC)</b>, mass = 0.064 kg<br>
+        Material embodied energy = 100-111 MJ/kg, mean = 105.5 MJ/kg
+        Component embodied energy = 0.064 x 105.5 = 6.75MJ
+        <br><br> <b>• Paper</b>, mass = 0.052 kg=<br>
+        Material embodied energy = 49-54 MJ/kg, mean = 51.5 MJ/kg
+        Component embodied energy = 0.052 x 51.5 = 2.68 MJ
+        <br><br> <b> • 6013 Aluminium</b>, mass = 0.048 kg<br>
+        Material embodied energy = 186-205 MJ/kg, mean = 195.5 MJ/kg
+        Component embodied energy = 0.048 x 195.5 = 9.38 MJ
+        <br><br> <b>• Lithium Ion Battery</b>, mass = 0.04 kg<br>
+        Material embodied energy = 900 MJ/kg
+        Component embodied energy = 0.04 x 900 = 36 MJ
+        <br><br> <b>• LCD Module</b>, mass = 0.024 kg<br>
+        Material embodied energy = 240 MJ/kg
+        Component embodied energy = 0.024 x 240 = 5.76 MJ
+        <br><br> <b>• Printed Circuit Board</b>, mass = 0.024 kg<br>
+        Material embodied energy = 130 MJ/kg
+        Component embodied energy = 0.024 x 130 = 3.12 MJ
+        <br><br> <b>• Camera Module</b>, mass = 0.02 kg<br>
+        Material embodied energy = 10.1-11.1 MJ/kg, mean = 10.6 MJ/kg
+        Component embodied energy = 0.02 x 10.6 = 0.21 MJ
+        <br><br>Total Embodied Energy = 70.6 MJ
+    </h5>
+    <h3 class="project_subheading">Transport embodied energy calculations</h3>
+    <h5>CES EduPack was also used to calculate the energy used in transporting the phone from the
+        Samsung manufacturing plant in Vietnam to London. This was assumed to be 17,000 km by a
+        shipping container to Southampton port, then 100 km by lorry to London. The CES value was
+        1.26 MJ, but independent calculations were performed below to verify this number.
+        If an ocean freight ship containing 18,000 shipping containers was to travel 21,140 km from
+        Hong Kong to Hamburg, the fuel required would contain approximately 195,300 GJ of energy
+        [6].<br><br>
+        Energy per km = 195,300 ÷ 21,140 = 9.24 GJ/km<br><br>
+        The phone will travel 17,000 km from Saigon, Vietnam to Southampton, UK.<br><br>
+        Energy consumption = 9.24 x 17,000 = 157,053 GJ<br><br>
+        Energy consumption per shipping container = 157,053 ÷ 18,000 = 8.73 GJ<br><br>
+        One shipping container has a volume of 38.5 m2 [7], and it is also assumed that the
+        dimensions of a phone box are 0.1 x 0.1 x 0.2 m.<br><br>
+        Phones per shipping container = 38.5 / (0.1 x 0.1 x 0.2) = 19,250 phones<br><br>
+        Energy to transport one phone = 8.73 / 19,250 = 0.453 MJ<br><br>Therefore it can be seen that the calculated
+        value for the energy in transport of 0.453 MJ, is
+        significantly less than the value of 1.26 MJ calculated by CES EduPack, however in the same
+        order of magnitude. This difference is likely due to inefficiencies such as the ship taking a
+        longer route, or not being loaded to 100% capacity.
+    </h5>
+    <!-- <h3 class="project_subheading">References</h3>
+    <h5 class"references">[1] https://www.iea.org/countries/haiti<br>[2]
+        https://ourworldindata.org/energy/country/haiti?country=~HTI<br>[3]
+        https://energypedia.info/wiki/Haiti_Energy_Situation<br>[4]
+        https://www.indexmundi.com/facts/indicators/EG.ELC.LOSS.ZS/rankings<br>[5]
+        https://en.wikipedia.org/wiki/Electricity_sector_in_Haiti#Electricity_supply_and_demand<br>[6]
+        https://www.researchgate.net/publication/303811272_Haiti_Sustainable_Energy_Roadmap_Harnessing_Domestic_Energy_Resources_to_Build_a_Reliable_Affordable_and_Climate-Compatible_Electricity_System<br>[7]
+        Inter-American Development Bank (IDB), “Project Results in Guyana,”
+        2012,www.iadb.org/en/mapamericas/guyana/mapamericas-project-results-in-guyana,5543.html<br>[8] IDB, “IDB and
+        JICA to Invest Up to $600 Million in Green Energy in Central America and theCaribbean,” press release
+        (Washington, DC: 16 March 2012)<br>[9] French Agency for Development, “Project Details
+        Sheet,”www.afd.fr/home/projets_afd/infrastructures_energie/Energie/organe-regulation-regional-afrique-ouest<br>[10]
+        Nordic Investment Bank, Annual Activity Report, 2011 (Helsinki: 2011)<br>[11] “German investment group sees
+        fertile investment grounds in DR,” Dominican Today, 2006<br>[12]
+        https://worldpopulationreview.com/countries/haiti-population<br>[13]
+        https://www.renewablesfirst.co.uk/windpower/windpower-learning-centre/how-large-are-farm-wind-turbines-medium-wind-turbines/<br>[14]
+        https://www.enercon.de/en/products/ep-2/e-82/<br>[15]
+        https://www.renewableenergyhub.co.uk/main/wind-turbines/renting-land-for-wind-farms/<br>[16]
+        https://news.energysage.com/what-are-the-most-efficient-solar-panels-on-the-market/<br><br><br><br><br>
+    </h5> -->
+    <footer class="footer">
+        <div class="icons">
+            <div class="icon_border">
+                <a class="icons" href="mailto:lcutner@me.com">
+                    <i class="bi-envelope"></i>
+                </a>
+            </div>
+            <div class="icon_border">
+                <a class="icons"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiXqqWTmvTuAhXEiFwKHXOzCpgQFjAAegQIAxAD&url=https%3A%2F%2Fwww.instagram.com%2Flouis_cutner%2F%3Fhl%3Den-gb&usg=AOvVaw2f47-FOatVEoI65Nz24zQn">
+                    <i class="bi-instagram"></i>
+                </a>
+            </div>
+            <div class="icon_border">
+                <a class="icons"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi21-qymvTuAhWCQUEAHR_KCh8QFjAAegQIARAD&url=https%3A%2F%2Fuk.linkedin.com%2Fin%2Flouis-cutner-8609091a3&usg=AOvVaw3FrT9wXvJERYiZ_d3QDaHe">
+                    <i class="bi-linkedin"></i>
+                </a>
+            </div>
+            <div class="icon_border">
+                <a class="icons" href="images/CV.pdf">
+                    <i class="bi-file-earmark-person"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
