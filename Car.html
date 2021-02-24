@@ -1,0 +1,141 @@
+<!-- HTML code for sample project page -->
+
+<!doctype html>
+<html lang="en-gb">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Louis Cutner</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="main.js"></script>
+
+<!-- Link to icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+<!-- Links to fonts used -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<body>
+    <main role="main"></main>
+    <a href="index.html" class="home">
+        <h2 class="project_title">Louis Cutner</h2>
+    </a>
+    <div class="wrapper">
+        <div class="header">
+            <a class="back" href="projects_v2.html">
+                <i class="bi-arrow-left"></i>
+            </a>
+            <h3 class="project_title">Flow analysis on a vehicle</h3>
+        </div>
+    </div>
+    <h5 class="top">I wanted to make a pick-up truck as Mater is my favourite character from the movie ‘Cars’, but I
+        thought he needed a bit of an update for this modern era. The car needs the ability to take cargo,
+        but should be aerodynamic and sleek looking so that Mater can feel cool as Lightening McQueen.
+        Also, I wanted a windscreen panel that went over the entire roof to make the car look very futuristic
+        and smooth in air flow. This would mean that Mater wouldn’t need another update for a long time.
+        I also didn’t want to make the design overly futuristic or complex as I don’t think that would fit
+        Mater’s personality.<br><br>
+        I decided to create three different models so that I could explore the effects of two different types
+        of cover over the pickup zone on the drag and flow. Design one had no cover, design 2 had a simple
+        cover, and design 3 had an aerodynamic cover.<br><br>
+        I initially performed 2D pressure and velocity analysis on the different designs, and of note were the
+        different flow detachments formed. I also looked at the flow trajectories of all 3 designs. When
+        looking at the goal results it was apparent that the second design was optimal for Mater to use as
+        it has the smallest value of drag, down force and the lowest drag coefficient. Calculations were
+        then performed on this design, determining the coefficient of drag in two different ways, and
+        determining the drag force and hence power required for the car.</h5>
+    <h3 class="project_subheading">DRAWINGS</h3>
+    <h5>In the initial drawings, I wanted to ensure the pickup zone was encorporated, but also create a sleek
+        design for the car - hence why I have chosen to have a front glass pannel exteending all the way
+        over the roof, along with a very simple and minimalistic design.
+    </h5>
+    <img class="project" src="images/Car/image_1.png">
+    <h3 class="project_subheading">CAD MODEL</h3>
+    <h5>Based on my initial drawings, I modelled my car in Fusion 360, and created renders in a sleek black colour to
+        look
+        futuristic and stylish to fit Mater’s personality. I decided to create three different models so that I could
+        explore the
+        effects of two different types of cover over the pickup zone on the drag and flow.
+    </h5>
+    <img class="project" src="images/Car/image_2.png">
+    <h3 class="project_subheading">VELOCTIY ANALYSIS</h3>
+    <h5>Mater will have to drive at fast speeds on the motor way frequently and so I performed 2D pressure and velocity
+        analyses to determine if my design was fit for Mater to use. It is interesting to see that with the three
+        different designs
+        there is a very different rear vacuum.
+    </h5>
+    <img class="project" src="images/Car/image_3.png">
+    <h3 class="project_subheading">PRESSURE ANALYSIS</h3>
+    <h5>I want Mater’s new design to last him for many years, so I performed a surface pressure analysis to ensure that
+        the
+        design was robust and would perform well.
+    </h5>
+    <img class="project" src="images/Car/image_4.png">
+    <h3 class="project_subheading">FLOW TRAJECTORIES</h3>
+    <h5>Mater will want to be fuel efficient, so to look at the air flow around the vehicle I analysed the flow
+        trajectories to
+        explore how the different shapes of the trunks’ would divert air differently - creating different vortexes.
+    </h5>
+    <img class="project" src="images/Car/image_5.png">
+    <h3 class="project_subheading">GOAL RESULTS</h3>
+    <h5>From the goal results it is apparent that design 2 is the best for Mater, as it has the smallest vallue of down
+        force, the
+        smallest value of drag, and the smallest value of the drag coefficient.
+    </h5>
+    <img class="project" src="images/Car/image_6.png">
+    <h3 class="project_subheading">CALCULATIONS</h3>
+    <h5>Below are calculations for car design 2.
+    </h5>
+    <img class="project" src="images/Car/image_7.png">
+    <!-- <h3 class="project_subheading">References</h3>
+    <h5 class"references">[1] https://www.iea.org/countries/haiti<br>[2]
+        https://ourworldindata.org/energy/country/haiti?country=~HTI<br>[3]
+        https://energypedia.info/wiki/Haiti_Energy_Situation<br>[4]
+        https://www.indexmundi.com/facts/indicators/EG.ELC.LOSS.ZS/rankings<br>[5]
+        https://en.wikipedia.org/wiki/Electricity_sector_in_Haiti#Electricity_supply_and_demand<br>[6]
+        https://www.researchgate.net/publication/303811272_Haiti_Sustainable_Energy_Roadmap_Harnessing_Domestic_Energy_Resources_to_Build_a_Reliable_Affordable_and_Climate-Compatible_Electricity_System<br>[7]
+        Inter-American Development Bank (IDB), “Project Results in Guyana,”
+        2012,www.iadb.org/en/mapamericas/guyana/mapamericas-project-results-in-guyana,5543.html<br>[8] IDB, “IDB and
+        JICA to Invest Up to $600 Million in Green Energy in Central America and theCaribbean,” press release
+        (Washington, DC: 16 March 2012)<br>[9] French Agency for Development, “Project Details
+        Sheet,”www.afd.fr/home/projets_afd/infrastructures_energie/Energie/organe-regulation-regional-afrique-ouest<br>[10]
+        Nordic Investment Bank, Annual Activity Report, 2011 (Helsinki: 2011)<br>[11] “German investment group sees
+        fertile investment grounds in DR,” Dominican Today, 2006<br>[12]
+        https://worldpopulationreview.com/countries/haiti-population<br>[13]
+        https://www.renewablesfirst.co.uk/windpower/windpower-learning-centre/how-large-are-farm-wind-turbines-medium-wind-turbines/<br>[14]
+        https://www.enercon.de/en/products/ep-2/e-82/<br>[15]
+        https://www.renewableenergyhub.co.uk/main/wind-turbines/renting-land-for-wind-farms/<br>[16]
+        https://news.energysage.com/what-are-the-most-efficient-solar-panels-on-the-market/<br><br><br><br><br>
+    </h5> -->
+    <footer class="footer">
+        <div class="icons">
+            <div class="icon_border">
+                <a class="icons" href="mailto:lcutner@me.com">
+                    <i class="bi-envelope"></i>
+                </a>
+            </div>
+            <div class="icon_border">
+                <a class="icons"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiXqqWTmvTuAhXEiFwKHXOzCpgQFjAAegQIAxAD&url=https%3A%2F%2Fwww.instagram.com%2Flouis_cutner%2F%3Fhl%3Den-gb&usg=AOvVaw2f47-FOatVEoI65Nz24zQn">
+                    <i class="bi-instagram"></i>
+                </a>
+            </div>
+            <div class="icon_border">
+                <a class="icons"
+                    href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi21-qymvTuAhWCQUEAHR_KCh8QFjAAegQIARAD&url=https%3A%2F%2Fuk.linkedin.com%2Fin%2Flouis-cutner-8609091a3&usg=AOvVaw3FrT9wXvJERYiZ_d3QDaHe">
+                    <i class="bi-linkedin"></i>
+                </a>
+            </div>
+            <div class="icon_border">
+                <a class="icons" href="images/CV.pdf">
+                    <i class="bi-file-earmark-person"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

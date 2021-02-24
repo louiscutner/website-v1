@@ -4,7 +4,7 @@
         width: 350px;
         height: 375px;
         padding-bottom: 15px;
-        border: solid lightgray 5px;
+        border: solid #e4e7eb 5px;
         border-radius: 19px;
     }
     .flex-item-image {
@@ -56,7 +56,7 @@
         margin: 45px 20px;
         width: 130px;
         height: 190px;
-        border: solid lightgray 5px;
+        border: solid e4e7eb 5px;
         border-radius: 17px;
     }
     .flex-item-image {
@@ -408,12 +408,12 @@ a.back {
 }
 
 .header_2 {
-    background: lightgray;
+    background: #e4e7eb;
     border-radius: 20% 20% 0 0;
 }
 
 .footer_2 {
-    background: lightgray;
+    background: #e4e7eb;
     padding-top: 10px;
     padding-bottom: 13px;
     outline-width: 5px;
