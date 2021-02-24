@@ -2,7 +2,7 @@
     .flex-item {
         margin: 20px;
         width: 350px;
-        height: 370px;
+        height: 375px;
         padding-bottom: 15px;
         border: solid lightgray 5px;
         border-radius: 19px;
@@ -414,8 +414,8 @@ a.back {
 
 .footer_2 {
     background: lightgray;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 13px;
     outline-width: 5px;
     color: black;
     padding-left: 2px;
